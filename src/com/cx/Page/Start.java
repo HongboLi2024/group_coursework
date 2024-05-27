@@ -1,0 +1,19 @@
+package com.cx.Page;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Start extends Application {
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("Login.fxml"))));
+        primaryStage.setTitle("儿童银行 登录");
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}

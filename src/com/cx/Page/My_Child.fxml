@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="625.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cx.Page.MyChild">
+   <children>
+      <Label layoutX="59.0" layoutY="64.0" text="孩子：" />
+      <ChoiceBox fx:id="comboBox" layoutX="110.0" layoutY="59.0" prefWidth="150.0" />
+      <Label layoutX="59.0" layoutY="121.0" text="流水记录：" />
+
+       <TableView fx:id="tableView" layoutX="100.0" layoutY="147.0" prefHeight="321.0" prefWidth="693.0">
+           <columns>
+               <TableColumn fx:id="time" prefWidth="169.0" text="时间" />
+               <TableColumn fx:id="type" prefWidth="99.0" text="交易类型" />
+               <TableColumn fx:id="blanc" prefWidth="111.0" text="金额" />
+               <TableColumn fx:id="Description" prefWidth="310.0" text="备注" />
+           </columns>
+       </TableView>
+      <Label layoutX="59.0" layoutY="490.0" text="设定攒钱目标金额：" />
+      <TextField fx:id="textField" layoutX="203.0" layoutY="485.0" />
+      <Button onAction="#Set_goal" layoutX="446.0" layoutY="485.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="确认" />
+      <Label fx:id="label" layoutX="417.0" layoutY="64.0" text="定期余额：" />
+      <Label fx:id="label1" layoutX="656.0" layoutY="64.0" text="活期余额：" />
+      <Label layoutX="59.0" layoutY="545.0" text="设定定期利率：" />
+      <TextField fx:id="textField1" layoutX="185.0" layoutY="540.0" />
+      <Button onAction="#Set_Money" layoutX="431.0" layoutY="540.0" mnemonicParsing="false" text="确认" />
+   </children>
+</AnchorPane>

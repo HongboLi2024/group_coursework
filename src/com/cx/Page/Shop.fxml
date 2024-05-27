@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cx.Page.Shop">
+    <children>
+        <TableView fx:id="tableView" layoutX="69.0" layoutY="47.0" prefHeight="391.0" prefWidth="699.0">
+            <columns>
+                <TableColumn fx:id="type" prefWidth="512.0" text="商品说明" />
+                <TableColumn fx:id="blanc" prefWidth="186.0" text="金额" />
+            </columns>
+        </TableView>
+        <Button layoutX="354.0" layoutY="475.0" mnemonicParsing="false" onAction="#Shop_Apply_For" prefHeight="37.0" prefWidth="129.0" text="购买商品" />
+    </children>
+</AnchorPane>

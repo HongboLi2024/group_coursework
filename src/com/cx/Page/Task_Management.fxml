@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="543.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cx.Page.TaskManagement">
+    <children>
+        <TableView fx:id="tableView" layoutX="55.0" layoutY="99.0" prefHeight="327.0" prefWidth="705.0">
+            <columns>
+                <TableColumn fx:id="type" prefWidth="328.0" text="任务说明" />
+                <TableColumn fx:id="blanc" prefWidth="89.0" text="金额" />
+                <TableColumn fx:id="name" prefWidth="115.0" text="孩子" />
+                <TableColumn fx:id="time" prefWidth="171.0" text="时间" />
+            </columns>
+        </TableView>
+        <Button layoutX="120.0" layoutY="469.0" mnemonicParsing="false" onAction="#Grant_request" text="任务通过" />
+        <Button onAction="#Delete_Task" layoutX="559.0" layoutY="469.0" mnemonicParsing="false" text="删除任务" />
+      <Button onAction="#Add_Task" layoutX="422.0" layoutY="469.0" mnemonicParsing="false" text="发布任务" />
+      <Button layoutX="266.0" layoutY="469.0" mnemonicParsing="false" onAction="#Task_failure" text="任务失败" />
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="634.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cx.Page.Balance">
+   <children>
+      <Label fx:id="H" layoutX="104.0" layoutY="87.0" text="活期余额：" />
+      <Label fx:id="D" layoutX="104.0" layoutY="144.0" text="定期余额：" />
+      <Button onAction="#Withdraw" layoutX="107.0" layoutY="295.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="225.0" text="提取现金" />
+      <Button onAction="#intervals" layoutX="107.0" layoutY="387.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="225.0" text="存入定期" />
+      <Button onAction="#goal" layoutX="107.0" layoutY="477.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="225.0" text="存入目标" />
+      <ProgressBar fx:id="progressBar" layoutX="138.0" layoutY="590.0" prefHeight="20.0" prefWidth="386.0" progress="0.0" />
+      <Label layoutX="42.0" layoutY="554.0" text="赞钱目标：" />
+   </children>
+</AnchorPane>

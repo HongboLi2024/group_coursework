@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="538.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cx.Page.RequestProcessing">
+   <children>
+      <TableView fx:id="tableView" layoutX="55.0" layoutY="99.0" prefHeight="327.0" prefWidth="705.0">
+        <columns>
+          <TableColumn fx:id="type" prefWidth="116.0" text="请求类型" />
+          <TableColumn fx:id="blanc" prefWidth="117.0" text="金额" />
+            <TableColumn fx:id="name" prefWidth="110.0" text="请求人" />
+            <TableColumn fx:id="Description" prefWidth="360.0" text="事项" />
+        </columns>
+      </TableView>
+      <Button layoutX="183.0" layoutY="469.0" mnemonicParsing="false" onAction="#Grant_request" text="同意请求" />
+      <Button layoutX="498.0" layoutY="469.0" mnemonicParsing="false" text="拒绝请求" />
+   </children>
+</AnchorPane>

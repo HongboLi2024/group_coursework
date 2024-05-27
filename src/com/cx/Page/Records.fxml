@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="546.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cx.Page.Records">
+   <children>
+      <TableView fx:id="tableView" layoutX="68.0" layoutY="54.0" prefHeight="453.0" prefWidth="699.0">
+        <columns>
+          <TableColumn fx:id="time" prefWidth="169.0" text="时间" />
+          <TableColumn fx:id="type" prefWidth="99.0" text="交易类型" />
+            <TableColumn fx:id="blanc" prefWidth="111.0" text="金额" />
+            <TableColumn fx:id="Description" prefWidth="310.0" text="备注" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
