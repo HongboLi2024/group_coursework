@@ -59,10 +59,10 @@ public class ShopManagement {
         dialog.setHeaderText("Please enter good's information");
 
 // Set the button types.
-        ButtonType loginButtonType = new ButtonType("Publish", ButtonBar.ButtonData.OK_DONE);
-        dialog.getDialogPane().getButtonTypes().addAll(loginButtonType, ButtonType.CANCEL);
+        ButtonType confirmButtonType = new ButtonType("Publish", ButtonBar.ButtonData.OK_DONE);
+        dialog.getDialogPane().getButtonTypes().addAll(confirmButtonType, ButtonType.CANCEL);
 
-// Create the username and password labels and fields.
+// Create the goodname and price labels and fields.
         GridPane grid = new GridPane();
         grid.setHgap(10);
         grid.setVgap(10);
@@ -80,22 +80,22 @@ public class ShopManagement {
 
 
 // Enable/Disable login button depending on whether a username was entered.
-        Node loginButton = dialog.getDialogPane().lookupButton(loginButtonType);
-        loginButton.setDisable(true);
+        Node confirmButton = dialog.getDialogPane().lookupButton(confirmButtonType);
+        confirmButton.setDisable(true);
 
 // Do some validation (using the Java 8 lambda syntax).
-        goodname.textProperty().addListener((observable, oldValue, newValue) -> {
-            loginButton.setDisable(newValue.trim().isEmpty());
+        goodPrice.textProperty().addListener((observable, oldValue, newValue) -> {
+            confirmButton.setDisable(newValue.trim().isEmpty());
         });
 
         dialog.getDialogPane().setContent(grid);
 
-// Request focus on the username field by default.
+// Request focus on the goodname field by default.
         Platform.runLater(() -> goodname.requestFocus());
 
-// Convert the result to a username-password-pair when the login button is clicked.
+// Convert the result to a goodname-goodprice-pair when the login button is clicked.
         dialog.setResultConverter(dialogButton -> {
-            if (dialogButton == loginButtonType) {
+            if (dialogButton == confirmButtonType) {
                 return new Pair<>(goodname.getText(), goodPrice.getText());
             }
             return null;
@@ -103,7 +103,7 @@ public class ShopManagement {
 
         Optional<Pair<String, String>> result = dialog.showAndWait();
 
-        result.ifPresent(usernamePassword -> {
+        result.ifPresent(goodnamegoodPrice -> {
             Product product=new Product();
             product.setName(goodname.getText());
 
