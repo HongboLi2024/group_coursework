@@ -1,5 +1,6 @@
 package com.cx.Page;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -68,5 +69,12 @@ public class parent {
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("My_Child.fxml"))));
         stage.setTitle("My Child");
         stage.show();
+    }
+
+
+    public void goBack(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("Login.fxml"))));
+        stage.setTitle("Login");
     }
 }
