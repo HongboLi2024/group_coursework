@@ -22,15 +22,15 @@ import java.util.Optional;
 public class ChildrenMain {
 
     @FXML
-    Label patriarch;
+    Label parent;
 
 
     public void initialize() {
 
         if (Children_Login.children.getPatriarch() != null) {
-            patriarch.setText("Parent:" + Children_Login.children.getPatriarch().getUsername());
+            parent.setText("Parent:" + Children_Login.children.getPatriarch().getUsername());
         } else {
-            patriarch.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+            parent.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
                     TextInputDialog dialog = new TextInputDialog("username");
