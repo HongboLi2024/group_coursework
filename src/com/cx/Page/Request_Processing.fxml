@@ -17,6 +17,6 @@
         </columns>
       </TableView>
       <Button layoutX="183.0" layoutY="469.0" mnemonicParsing="false" onAction="#Grant_request" text="Agree" />
-      <Button layoutX="498.0" layoutY="469.0" mnemonicParsing="false" text="Refuse" />
+      <Button layoutX="498.0" layoutY="469.0" mnemonicParsing="false" onAction="#Refuse_request" text="Refuse" />
    </children>
 </AnchorPane>

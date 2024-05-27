@@ -94,6 +94,16 @@ public class RequestProcessing {
     }
 
 
+    public void Refuse_request(){
+        Apply_For selectedItem = (Apply_For) tableView.getSelectionModel().getSelectedItem();
+        selectedItem.setIs(true);
+        selectedItem.setIs_G(false);
+        Set_Data(Children_Login.parent.getApply_fors());
+        File_Date.Writ_File(Children_Login.data1);
+    }
+
+
+
     /**
      * 设置数据
      */
