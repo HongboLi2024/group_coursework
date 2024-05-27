@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Patriarch_c {
+public class parent {
 
     public void initialize() {
 
@@ -26,7 +26,7 @@ public class Patriarch_c {
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("Request_Processing.fxml"));
         AnchorPane anchorPane=fxmlLoader.load();
         RequestProcessing records= fxmlLoader.getController();
-        records.Set_Data(Children_Login.patriarch.getApply_fors());
+        records.Set_Data(Children_Login.parent.getApply_fors());
         stage.setScene(new Scene(anchorPane));
         stage.setTitle("Processing Requirement");
         stage.show();
@@ -44,7 +44,7 @@ public class Patriarch_c {
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("Task_Management.fxml"));
         AnchorPane anchorPane=fxmlLoader.load();
         TaskManagement records= fxmlLoader.getController();
-        records.Set_Data(Children_Login.patriarch.getTasks());
+        records.Set_Data(Children_Login.parent.getTasks());
         stage.setScene(new Scene(anchorPane));
         stage.setTitle("Task Management");
         stage.show();

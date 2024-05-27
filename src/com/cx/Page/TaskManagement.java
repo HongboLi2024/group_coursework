@@ -1,6 +1,5 @@
 package com.cx.Page;
 
-import com.cx.entity.Apply_For;
 import com.cx.entity.Records;
 import com.cx.entity.Task;
 import com.cx.utils.File_Date;
@@ -76,7 +75,7 @@ public class TaskManagement {
         }
 
         File_Date.Writ_File(Children_Login.data1);
-        Set_Data(Children_Login.patriarch.getTasks());
+        Set_Data(Children_Login.parent.getTasks());
 
     }
 
@@ -89,7 +88,7 @@ public class TaskManagement {
             selectedItem.setIs(true);
 
             File_Date.Writ_File(Children_Login.data1);
-            Set_Data(Children_Login.patriarch.getTasks());
+            Set_Data(Children_Login.parent.getTasks());
         }else {
             Alert A=new Alert(Alert.AlertType.ERROR);
             A.setTitle("Pass the task");
@@ -162,10 +161,10 @@ public class TaskManagement {
             task.setTime(username.getText());
             try {
                 task.setMoney(Double.parseDouble(password.getText()));
-                Children_Login.patriarch.getTasks().add(task);
+                Children_Login.parent.getTasks().add(task);
                 task.setIs(false);
                 File_Date.Writ_File(Children_Login.data1);
-                Set_Data(Children_Login.patriarch.getTasks());
+                Set_Data(Children_Login.parent.getTasks());
 
             } catch (NumberFormatException e) {
                 Alert A=new Alert(Alert.AlertType.ERROR);
@@ -186,9 +185,9 @@ public class TaskManagement {
     public void Delete_Task(){
         Task selectedItem = (Task) tableView.getSelectionModel().getSelectedItem();
         if(selectedItem.getName()==null){
-            Children_Login.patriarch.getTasks().remove(selectedItem);
+            Children_Login.parent.getTasks().remove(selectedItem);
             File_Date.Writ_File(Children_Login.data1);
-            Set_Data(Children_Login.patriarch.getTasks());
+            Set_Data(Children_Login.parent.getTasks());
 
         }else {
             Alert A=new Alert(Alert.AlertType.ERROR);

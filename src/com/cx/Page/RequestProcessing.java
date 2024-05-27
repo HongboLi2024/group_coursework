@@ -2,7 +2,6 @@ package com.cx.Page;
 
 import com.cx.entity.Apply_For;
 import com.cx.entity.Records;
-import com.cx.entity.Task;
 import com.cx.utils.File_Date;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -48,12 +47,12 @@ public class RequestProcessing {
         Apply_For selectedItem = (Apply_For) tableView.getSelectionModel().getSelectedItem();
       selectedItem.setIs(true);
       selectedItem.setIs_G(true);
-      Set_Data(Children_Login.patriarch.getApply_fors());
+      Set_Data(Children_Login.parent.getApply_fors());
       if(selectedItem.getType().equals("Relationship binding")){
           for (int i=0;i<Children_Login.data1.getChildrenArrayList().size();i++){
              if( Children_Login.data1.getChildrenArrayList().get(i).getUsername().equals(selectedItem.getApply_for_Name())){
-                 Children_Login.data1.getChildrenArrayList().get(i).setPatriarch(Children_Login.patriarch);
-                 Children_Login.patriarch.getChildren().add(Children_Login.data1.getChildrenArrayList().get(i));
+                 Children_Login.data1.getChildrenArrayList().get(i).setPatriarch(Children_Login.parent);
+                 Children_Login.parent.getChildren().add(Children_Login.data1.getChildrenArrayList().get(i));
              }
           }
       }

@@ -1,7 +1,6 @@
 package com.cx.Page;
 
 import com.cx.entity.Product;
-import com.cx.entity.Task;
 import com.cx.utils.File_Date;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -21,17 +20,17 @@ public class ShopManagement {
     @FXML
     TableView tableView;
     @FXML
-    TableColumn name;
+    TableColumn Good;
 
 
     @FXML
-    TableColumn blanc;
+    TableColumn Price;
 
 
     public void initialize() {
-        name. setCellValueFactory(new PropertyValueFactory("name"));
+        Good. setCellValueFactory(new PropertyValueFactory("name"));
 
-        blanc. setCellValueFactory(new PropertyValueFactory("money"));
+        Price. setCellValueFactory(new PropertyValueFactory("money"));
         Set_Data();
 
     }
@@ -42,7 +41,7 @@ public class ShopManagement {
      */
     public void Delete_Shop(ActionEvent event) {
         Product product= (Product) tableView.getSelectionModel().getSelectedItem();
-        Children_Login.patriarch.getPatriarchArrayList().remove(product);
+        Children_Login.parent.getProductArrayList().remove(product);
         File_Date.Writ_File(Children_Login.data1);
         Set_Data();
     }
@@ -111,7 +110,7 @@ public class ShopManagement {
 
             try {
              product.setMoney(Double.parseDouble(password.getText()));
-                Children_Login.patriarch.getPatriarchArrayList().add(product);
+                Children_Login.parent.getProductArrayList().add(product);
                 File_Date.Writ_File(Children_Login.data1);
                 Set_Data();
             } catch (NumberFormatException e) {
@@ -135,13 +134,9 @@ public class ShopManagement {
      */
     public void Set_Data(){
         tableView.getItems().clear();
-        ArrayList<Product> products = Children_Login.patriarch.getPatriarchArrayList();
+        ArrayList<Product> products = Children_Login.parent.getProductArrayList();
         for (int i=0;i<products.size();i++){
-
-
-
             tableView.getItems().add(products.get(i));
-
         }
     }
 

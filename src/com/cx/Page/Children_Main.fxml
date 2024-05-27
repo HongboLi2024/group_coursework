@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="662.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cx.Page.ChildrenMain">
    <children>
-      <Label fx:id="patriarch" layoutX="689.0" layoutY="150.0" text="Currently unbound parents, click to bind" textFill="#0f3feb" />
+      <Label fx:id="parent" layoutX="689.0" layoutY="150.0" text="Currently unbound parents, click to bind" textFill="#0f3feb" />
       <Button onAction="#Balance" layoutX="295.0" layoutY="279.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="326.0" text="View balance" />
       <Button onAction="#Running_water" layoutX="295.0" layoutY="373.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="326.0" text="Details of fund flow" />
       <Button onAction="#Task_List" layoutX="295.0" layoutY="465.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="326.0" text="Task list" />

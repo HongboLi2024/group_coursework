@@ -3,24 +3,24 @@ package com.cx.entity;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Patriarch implements Serializable {
+public class Parent implements Serializable {
     private ArrayList<Children> children=new ArrayList<>();//孩子集合
     private ArrayList<Task> tasks =new ArrayList<>();//任务集合
     private String username;//用户名
     private String password;//密码
     private ArrayList<Apply_For> apply_fors=new ArrayList<>();//请求集合
-    private ArrayList<Product> patriarchArrayList=new ArrayList<>();//商品集合
+    private ArrayList<Product> productArrayList =new ArrayList<>();//商品集合
 
     private double regular_intervals;//定期利率
     private double current;//活期利率
 
 
-    public ArrayList<Product> getPatriarchArrayList() {
-        return patriarchArrayList;
+    public ArrayList<Product> getProductArrayList() {
+        return productArrayList;
     }
 
-    public void setPatriarchArrayList(ArrayList<Product> patriarchArrayList) {
-        this.patriarchArrayList = patriarchArrayList;
+    public void setProductArrayList(ArrayList<Product> productArrayList) {
+        this.productArrayList = productArrayList;
     }
 
 

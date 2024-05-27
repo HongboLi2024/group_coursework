@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Children implements Serializable {
     private String username;//用户名
     private String password;//密码
-    private Patriarch patriarch;//家长
+    private Parent parent;//家长
 
     private ArrayList<Records> records=new ArrayList<>();//流水记录
     private double money_D;//定期金额
@@ -80,11 +80,11 @@ public class Children implements Serializable {
         this.password = password;
     }
 
-    public Patriarch getPatriarch() {
-        return patriarch;
+    public Parent getPatriarch() {
+        return parent;
     }
 
-    public void setPatriarch(Patriarch patriarch) {
-        this.patriarch = patriarch;
+    public void setPatriarch(Parent parent) {
+        this.parent = parent;
     }
 }

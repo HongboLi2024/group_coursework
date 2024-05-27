@@ -2,7 +2,7 @@ package com.cx.Page;
 
 import com.cx.entity.Children;
 import com.cx.entity.Data;
-import com.cx.entity.Patriarch;
+import com.cx.entity.Parent;
 import com.cx.utils.File_Date;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -62,10 +62,10 @@ public class Register {
         if(c) {
             if (id.getSelectionModel().getSelectedIndex() == 0) {
                 //家长账户
-                Patriarch patriarch = new Patriarch();
-                patriarch.setUsername(username.getText());
-                patriarch.setPassword(password.getText());
-                data.getPatriarchArrayList().add(patriarch);
+                Parent parent = new Parent();
+                parent.setUsername(username.getText());
+                parent.setPassword(password.getText());
+                data.getPatriarchArrayList().add(parent);
                 File_Date.Writ_File(data);
 
 

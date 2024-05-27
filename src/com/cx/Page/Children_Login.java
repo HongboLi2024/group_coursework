@@ -2,7 +2,7 @@ package com.cx.Page;
 
 import com.cx.entity.Children;
 import com.cx.entity.Data;
-import com.cx.entity.Patriarch;
+import com.cx.entity.Parent;
 import com.cx.utils.File_Date;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -10,7 +10,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -27,7 +26,7 @@ public class Children_Login {
     ChoiceBox<String> id;
 
     public static Children children;
-    public static Patriarch patriarch;
+    public static Parent parent;
     public static Data data1;
 
     public void initialize() {
@@ -51,7 +50,7 @@ public class Children_Login {
             for (int i=0;i<data.getPatriarchArrayList().size();i++){
                 if(data.getPatriarchArrayList().get(i).getUsername().equals(username.getText())){
                     if(data.getPatriarchArrayList().get(i).getPassword().equals(password.getText())){
-                        patriarch=data.getPatriarchArrayList().get(i);
+                        parent =data.getPatriarchArrayList().get(i);
                         data1=data;
                         Button source = (Button) e.getSource();
                         Stage window = (Stage) source.getScene().getWindow();

@@ -47,8 +47,8 @@ public class MyChild {
     Children children;
 
     public void initialize() {
-        for (int i=0;i<Children_Login.patriarch.getChildren().size();i++){
-            comboBox.getItems().add(Children_Login.patriarch.getChildren().get(i).getUsername());
+        for (int i = 0; i<Children_Login.parent.getChildren().size(); i++){
+            comboBox.getItems().add(Children_Login.parent.getChildren().get(i).getUsername());
         }
         time. setCellValueFactory(new PropertyValueFactory("time"));
         type. setCellValueFactory(new PropertyValueFactory("type"));
@@ -57,12 +57,12 @@ public class MyChild {
 
         comboBox.setOnAction(event -> {
            String name= (String) comboBox.getSelectionModel().getSelectedItem();
-           for (int i=0;i<Children_Login.patriarch.getChildren().size();i++){
-               if (Children_Login.patriarch.getChildren().get(i).getUsername().equals(name)){
-                   label.setText("Fixed account balance: "+Children_Login.patriarch.getChildren().get(i).getMoney_D());
-                   label1.setText("Current account balance: "+Children_Login.patriarch.getChildren().get(i).getMoney_H());
-                   children=Children_Login.patriarch.getChildren().get(i);
-                   setDate(Children_Login.patriarch.getChildren().get(i).getRecords());
+           for (int i = 0; i<Children_Login.parent.getChildren().size(); i++){
+               if (Children_Login.parent.getChildren().get(i).getUsername().equals(name)){
+                   label.setText("Fixed account balance: "+Children_Login.parent.getChildren().get(i).getMoney_D());
+                   label1.setText("Current account balance: "+Children_Login.parent.getChildren().get(i).getMoney_H());
+                   children=Children_Login.parent.getChildren().get(i);
+                   setDate(Children_Login.parent.getChildren().get(i).getRecords());
                }
            }
         });
@@ -79,7 +79,7 @@ public class MyChild {
     public void Set_Money(){
         try {
             double s= Double.parseDouble(textField1.getText());
-            Children_Login.patriarch.setCurrent(s);
+            Children_Login.parent.setCurrent(s);
             File_Date.Writ_File(Children_Login.data1);
         } catch (NumberFormatException e) {
             Alert A=new Alert(Alert.AlertType.ERROR);

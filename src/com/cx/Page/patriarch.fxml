@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="501.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cx.Page.Patriarch_c">
+<AnchorPane prefHeight="501.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cx.Page.parent">
    <children>
       <Button layoutX="214.0" layoutY="216.0" mnemonicParsing="false" onAction="#RequestProcessing" prefHeight="42.0" prefWidth="277.0" text="Processing requests" />
       <Button layoutX="214.0" layoutY="312.0" mnemonicParsing="false" onAction="#Task" prefHeight="42.0" prefWidth="277.0" text="Task Management" />
