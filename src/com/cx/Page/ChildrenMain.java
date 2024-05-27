@@ -28,14 +28,14 @@ public class ChildrenMain {
     public void initialize() {
 
         if (Children_Login.children.getPatriarch() != null) {
-            patriarch.setText("家长:" + Children_Login.children.getPatriarch().getUsername());
+            patriarch.setText("Parent:" + Children_Login.children.getPatriarch().getUsername());
         } else {
             patriarch.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-                    TextInputDialog dialog = new TextInputDialog("用户名");
-                    dialog.setTitle("账户绑定");
-                    dialog.setContentText("请输入你需要绑定的用户名:");
+                    TextInputDialog dialog = new TextInputDialog("username");
+                    dialog.setTitle("Bind your parent account");
+                    dialog.setContentText("Please enter the username you need to bind:");
 
 // Traditional way to get the response value.
                     Optional<String> result = dialog.showAndWait();
@@ -45,15 +45,15 @@ public class ChildrenMain {
                             if(data.getPatriarchArrayList().get(i).getUsername().equals(result.get())){
                                 Apply_For apply_for=new Apply_For();
                                 apply_for.setApply_for_Name(Children_Login.children.getUsername());
-                                apply_for.setType("关系绑定");
+                                apply_for.setType("Relationship binding");
                                 data.getPatriarchArrayList().get(i).getApply_fors().add(apply_for);
                                 Children_Login.children.getApply_fors().add(apply_for);
                                 File_Date.Writ_File(data);
 
                                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                                alert.setTitle("关系绑定");
+                                alert.setTitle("Relationship binding");
                                 alert.setHeaderText(null);
-                                alert.setContentText("已成功发送绑定请求，等待家长同意");
+                                alert.setContentText("Successfully sent binding request, waiting for parental agree");
 
                                 alert.showAndWait();
                                 return;
@@ -61,9 +61,9 @@ public class ChildrenMain {
                         }
 
                         Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setTitle("关系绑定");
+                        alert.setTitle("Relationship binding");
                         alert.setHeaderText(null);
-                        alert.setContentText("错误，该账户不存在");
+                        alert.setContentText("Error, the account does not exist");
 
                         alert.showAndWait();
                     }
@@ -84,7 +84,7 @@ public class ChildrenMain {
 
         Stage stage=new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("Balance.fxml"))));
-        stage.setTitle("余额");
+        stage.setTitle("Balance");
         stage.show();
     }
 
@@ -101,7 +101,7 @@ public class ChildrenMain {
         Records records= fxmlLoader.getController();
         records.setDate(Children_Login.children.getRecords());
         stage.setScene(new Scene(anchorPane));
-        stage.setTitle("流水");
+        stage.setTitle("Fund flowing");
         stage.show();
     }
 
@@ -112,13 +112,13 @@ public class ChildrenMain {
         if(Children_Login.children.getPatriarch()!=null){
             Stage stage=new Stage();
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("Task_List.fxml"))));
-            stage.setTitle("任务列表");
+            stage.setTitle("Task list");
             stage.show();
         }else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("任务列表");
+            alert.setTitle("Task list");
             alert.setHeaderText(null);
-            alert.setContentText("错误,请先绑定家长");
+            alert.setContentText("Error, please bind your parent first");
             alert.showAndWait();
         }
     }
@@ -132,13 +132,13 @@ public class ChildrenMain {
         if(Children_Login.children.getPatriarch()!=null){
             Stage stage=new Stage();
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("Shop.fxml"))));
-            stage.setTitle("商品列表");
+            stage.setTitle("Goods list");
             stage.show();
         }else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("任务列表");
+            alert.setTitle("Goods list");
             alert.setHeaderText(null);
-            alert.setContentText("错误,请先绑定家长");
+            alert.setContentText("Error, please bind your parent first");
             alert.showAndWait();
         }
     }

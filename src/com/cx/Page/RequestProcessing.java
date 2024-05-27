@@ -49,7 +49,7 @@ public class RequestProcessing {
       selectedItem.setIs(true);
       selectedItem.setIs_G(true);
       Set_Data(Children_Login.patriarch.getApply_fors());
-      if(selectedItem.getType().equals("关系绑定")){
+      if(selectedItem.getType().equals("Relationship binding")){
           for (int i=0;i<Children_Login.data1.getChildrenArrayList().size();i++){
              if( Children_Login.data1.getChildrenArrayList().get(i).getUsername().equals(selectedItem.getApply_for_Name())){
                  Children_Login.data1.getChildrenArrayList().get(i).setPatriarch(Children_Login.patriarch);
@@ -58,14 +58,14 @@ public class RequestProcessing {
           }
       }
 
-      if(selectedItem.getType().equals("购买商品")){
+      if(selectedItem.getType().equals("Purchase Goods")){
           for (int i=0;i<Children_Login.data1.getChildrenArrayList().size();i++){
               if( Children_Login.data1.getChildrenArrayList().get(i).getUsername().equals(selectedItem.getApply_for_Name())){
                   Children_Login.data1.getChildrenArrayList().get(i).setMoney_H(Children_Login.data1.getChildrenArrayList().get(i).getMoney_H()-selectedItem.getMoney());
                   com.cx.entity.Records records=new Records();
                   records.setMoney(selectedItem.getMoney());
-                  records.setType("支出");
-                  records.setDescription("购买商品:"+selectedItem.getDescription());
+                  records.setType("Pay");
+                  records.setDescription("Purchase Goods:"+selectedItem.getDescription());
                   SimpleDateFormat customFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
                   String formattedDate = customFormat.format(new Date());
                   records.setTime(formattedDate);
@@ -74,14 +74,14 @@ public class RequestProcessing {
           }
       }
 
-      if (selectedItem.getType().equals("提取现金")){
+      if (selectedItem.getType().equals("Withdraw")){
           for (int i=0;i<Children_Login.data1.getChildrenArrayList().size();i++){
               if( Children_Login.data1.getChildrenArrayList().get(i).getUsername().equals(selectedItem.getApply_for_Name())){
                   Children_Login.data1.getChildrenArrayList().get(i).setMoney_H(Children_Login.data1.getChildrenArrayList().get(i).getMoney_H()-selectedItem.getMoney());
                   com.cx.entity.Records records=new Records();
                   records.setMoney(selectedItem.getMoney());
-                  records.setType("支出");
-                  records.setDescription("提取现金:"+selectedItem.getMoney());
+                  records.setType("amount");
+                  records.setDescription("Withdraw"+selectedItem.getMoney());
                   SimpleDateFormat customFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
                   String formattedDate = customFormat.format(new Date());
                   records.setTime(formattedDate);

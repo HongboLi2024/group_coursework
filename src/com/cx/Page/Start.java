@@ -9,7 +9,7 @@ public class Start extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("Login.fxml"))));
-        primaryStage.setTitle("儿童银行 登录");
+        primaryStage.setTitle("Welcome to Children Bank");
         primaryStage.show();
     }
 

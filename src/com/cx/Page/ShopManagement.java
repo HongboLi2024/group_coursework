@@ -22,14 +22,16 @@ public class ShopManagement {
     TableView tableView;
     @FXML
     TableColumn name;
+
+
     @FXML
-    TableColumn price;
+    TableColumn blanc;
 
 
     public void initialize() {
         name. setCellValueFactory(new PropertyValueFactory("name"));
 
-        price. setCellValueFactory(new PropertyValueFactory("money"));
+        blanc. setCellValueFactory(new PropertyValueFactory("money"));
         Set_Data();
 
     }
@@ -50,13 +52,15 @@ public class ShopManagement {
      * @param event
      */
     public void Add_Shop(ActionEvent event) {
+
+
         // Create the custom dialog.
         Dialog<Pair<String, String>> dialog = new Dialog<>();
-        dialog.setTitle("添加商品");
-        dialog.setHeaderText("请输入商品信息");
+        dialog.setTitle("Publish Good");
+        dialog.setHeaderText("Please enter good's information");
 
 // Set the button types.
-        ButtonType loginButtonType = new ButtonType("添加", ButtonBar.ButtonData.OK_DONE);
+        ButtonType loginButtonType = new ButtonType("Publish", ButtonBar.ButtonData.OK_DONE);
         dialog.getDialogPane().getButtonTypes().addAll(loginButtonType, ButtonType.CANCEL);
 
 // Create the username and password labels and fields.
@@ -66,13 +70,13 @@ public class ShopManagement {
         grid.setPadding(new Insets(20, 150, 10, 10));
 
         TextField username = new TextField();
-        username.setPromptText("商品说明");
+        username.setPromptText("Description of Goods");
         TextField password = new TextField();
-        password.setPromptText("金额");
+        password.setPromptText("Price");
 
-        grid.add(new Label("商品说明:"), 0, 0);
+        grid.add(new Label("Description of Goods:"), 0, 0);
         grid.add(username, 1, 0);
-        grid.add(new Label("金额:"), 0, 1);
+        grid.add(new Label("Price:"), 0, 1);
         grid.add(password, 1, 1);
 
 
@@ -112,10 +116,14 @@ public class ShopManagement {
                 Set_Data();
             } catch (NumberFormatException e) {
                 Alert A=new Alert(Alert.AlertType.ERROR);
-                A.setTitle("添加任务");
-                A.setHeaderText("错误,请输入正确信息");
+                A.setTitle("Publish Goods");
+                A.setHeaderText("Error, please enter the correct information");
                 A.showAndWait();
             }
+
+
+
+
         });
 
     }
@@ -129,7 +137,11 @@ public class ShopManagement {
         tableView.getItems().clear();
         ArrayList<Product> products = Children_Login.patriarch.getPatriarchArrayList();
         for (int i=0;i<products.size();i++){
+
+
+
             tableView.getItems().add(products.get(i));
+
         }
     }
 

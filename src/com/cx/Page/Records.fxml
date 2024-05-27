@@ -11,10 +11,10 @@
    <children>
       <TableView fx:id="tableView" layoutX="68.0" layoutY="54.0" prefHeight="453.0" prefWidth="699.0">
         <columns>
-          <TableColumn fx:id="time" prefWidth="169.0" text="时间" />
-          <TableColumn fx:id="type" prefWidth="99.0" text="交易类型" />
-            <TableColumn fx:id="blanc" prefWidth="111.0" text="金额" />
-            <TableColumn fx:id="Description" prefWidth="310.0" text="备注" />
+          <TableColumn fx:id="time" prefWidth="169.0" text="Time" />
+          <TableColumn fx:id="type" prefWidth="99.0" text="Type of Transaction" />
+            <TableColumn fx:id="blanc" prefWidth="111.0" text="Money" />
+            <TableColumn fx:id="Description" prefWidth="310.0" text="Note" />
         </columns>
       </TableView>
    </children>

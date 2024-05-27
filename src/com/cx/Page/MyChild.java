@@ -59,8 +59,8 @@ public class MyChild {
            String name= (String) comboBox.getSelectionModel().getSelectedItem();
            for (int i=0;i<Children_Login.patriarch.getChildren().size();i++){
                if (Children_Login.patriarch.getChildren().get(i).getUsername().equals(name)){
-                   label.setText("定期余额: "+Children_Login.patriarch.getChildren().get(i).getMoney_D());
-                   label1.setText("活期余额: "+Children_Login.patriarch.getChildren().get(i).getMoney_H());
+                   label.setText("Fixed account balance: "+Children_Login.patriarch.getChildren().get(i).getMoney_D());
+                   label1.setText("Current account balance: "+Children_Login.patriarch.getChildren().get(i).getMoney_H());
                    children=Children_Login.patriarch.getChildren().get(i);
                    setDate(Children_Login.patriarch.getChildren().get(i).getRecords());
                }
@@ -83,13 +83,13 @@ public class MyChild {
             File_Date.Writ_File(Children_Login.data1);
         } catch (NumberFormatException e) {
             Alert A=new Alert(Alert.AlertType.ERROR);
-            A.setTitle("修改利率");
-            A.setHeaderText("错误,请输入正确利率");
+            A.setTitle("Change interest rates");
+            A.setHeaderText("Error, please enter the correct interest rate");
             A.showAndWait();
         }
     }
     /**
-     * 设置定期利率
+     * 设置mubiao
      */
     public void Set_goal(){
         try {
@@ -98,8 +98,8 @@ public class MyChild {
             File_Date.Writ_File(Children_Login.data1);
         } catch (NumberFormatException e) {
             Alert A=new Alert(Alert.AlertType.ERROR);
-            A.setTitle("设置攒钱目标");
-            A.setHeaderText("错误,请输入数字");
+            A.setTitle("Set a Goal");
+            A.setHeaderText("Error, please enter a number!");
             A.showAndWait();
         }
     }

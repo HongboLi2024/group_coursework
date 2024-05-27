@@ -54,8 +54,8 @@ public class TaskManagement {
 
         if (selectedItem.getName()==null){
             Alert A=new Alert(Alert.AlertType.ERROR);
-            A.setTitle("任务通过");
-            A.setHeaderText("错误,该任务未接");
+            A.setTitle("Pass the task");
+            A.setHeaderText("Error, the task was not taken");
             A.showAndWait();
             return;
         }
@@ -66,8 +66,8 @@ public class TaskManagement {
                 Children_Login.data1.getChildrenArrayList().get(i).setMoney_H(Children_Login.data1.getChildrenArrayList().get(i).getMoney_H()+selectedItem.getMoney());
                 com.cx.entity.Records records=new Records();
                 records.setMoney(selectedItem.getMoney());
-                records.setType("收入");
-                records.setDescription("任务结算:"+selectedItem.getDescription());
+                records.setType("Income");
+                records.setDescription("Task settlement:"+selectedItem.getDescription());
                 SimpleDateFormat customFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
                 String formattedDate = customFormat.format(new Date());
                 records.setTime(formattedDate);
@@ -92,8 +92,8 @@ public class TaskManagement {
             Set_Data(Children_Login.patriarch.getTasks());
         }else {
             Alert A=new Alert(Alert.AlertType.ERROR);
-            A.setTitle("任务通过");
-            A.setHeaderText("错误,该任务未接");
+            A.setTitle("Pass the task");
+            A.setHeaderText("Error, the task was not taken on");
             A.showAndWait();
         }
     }
@@ -105,11 +105,11 @@ public class TaskManagement {
     public void Add_Task(){
         // Create the custom dialog.
         Dialog<Pair<String, String>> dialog = new Dialog<>();
-        dialog.setTitle("添加任务");
-        dialog.setHeaderText("请输入任务信息");
+        dialog.setTitle("Publish Task");
+        dialog.setHeaderText("Please enter task information");
 
 // Set the button types.
-        ButtonType loginButtonType = new ButtonType("添加", ButtonBar.ButtonData.OK_DONE);
+        ButtonType loginButtonType = new ButtonType("Publish", ButtonBar.ButtonData.OK_DONE);
         dialog.getDialogPane().getButtonTypes().addAll(loginButtonType, ButtonType.CANCEL);
 
 // Create the username and password labels and fields.
@@ -119,16 +119,16 @@ public class TaskManagement {
         grid.setPadding(new Insets(20, 150, 10, 10));
 
         TextField username = new TextField();
-        username.setPromptText("时间");
+        username.setPromptText("Time");
         TextField password = new TextField();
-        password.setPromptText("报酬");
+        password.setPromptText("Reward");
 
         TextArea textArea=new TextArea();
-        grid.add(new Label("时间:"), 0, 0);
+        grid.add(new Label("Time:"), 0, 0);
         grid.add(username, 1, 0);
-        grid.add(new Label("报酬:"), 0, 1);
+        grid.add(new Label("Reward:"), 0, 1);
         grid.add(password, 1, 1);
-        grid.add(new Label("任务说明:"),0,2);
+        grid.add(new Label("Description"),0,2);
         grid.add(textArea,0,3);
 
 
@@ -169,8 +169,8 @@ public class TaskManagement {
 
             } catch (NumberFormatException e) {
                 Alert A=new Alert(Alert.AlertType.ERROR);
-                A.setTitle("添加任务");
-                A.setHeaderText("错误,请输入正确信息");
+                A.setTitle("Publish");
+                A.setHeaderText("Error, please enter the correct information");
                 A.showAndWait();
             }
 
@@ -192,8 +192,8 @@ public class TaskManagement {
 
         }else {
             Alert A=new Alert(Alert.AlertType.ERROR);
-            A.setTitle("删除任务");
-            A.setHeaderText("错误,该任务已有孩子接，不可删除");
+            A.setTitle("Delete");
+            A.setHeaderText("Error, the task has already been taken by a child and cannot be deleted");
             A.showAndWait();
         }
     }

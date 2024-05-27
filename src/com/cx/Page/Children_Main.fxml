@@ -10,12 +10,12 @@
 
 <AnchorPane prefHeight="662.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cx.Page.ChildrenMain">
    <children>
-      <Label fx:id="patriarch" layoutX="689.0" layoutY="150.0" text="当前未绑定家长，点击绑定" textFill="#0f3feb" />
-      <Button onAction="#Balance" layoutX="295.0" layoutY="279.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="326.0" text="查看余额" />
-      <Button onAction="#Running_water" layoutX="295.0" layoutY="373.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="326.0" text="流水明细" />
-      <Button onAction="#Task_List" layoutX="295.0" layoutY="465.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="326.0" text="任务列表" />
-      <Button onAction="#Shop" layoutX="295.0" layoutY="566.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="326.0" text="交易" />
-      <Label layoutX="390.0" layoutY="82.0" prefHeight="40.0" prefWidth="336.0" text="儿童银行">
+      <Label fx:id="patriarch" layoutX="689.0" layoutY="150.0" text="Currently unbound parents, click to bind" textFill="#0f3feb" />
+      <Button onAction="#Balance" layoutX="295.0" layoutY="279.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="326.0" text="View balance" />
+      <Button onAction="#Running_water" layoutX="295.0" layoutY="373.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="326.0" text="Details of fund flow" />
+      <Button onAction="#Task_List" layoutX="295.0" layoutY="465.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="326.0" text="Task list" />
+      <Button onAction="#Shop" layoutX="295.0" layoutY="566.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="326.0" text="Transaction" />
+      <Label layoutX="390.0" layoutY="82.0" prefHeight="40.0" prefWidth="336.0" text="Children Bank">
          <font>
             <Font size="35.0" />
          </font>

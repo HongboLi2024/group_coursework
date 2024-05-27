@@ -32,8 +32,8 @@ public class Children_Login {
 
     public void initialize() {
 
-        id.getItems().add("儿童");
-        id.getItems().add("家长");
+        id.getItems().add("Children");
+        id.getItems().add("Parent");
 
         id.getSelectionModel().select(0);
     }
@@ -56,7 +56,7 @@ public class Children_Login {
                         Button source = (Button) e.getSource();
                         Stage window = (Stage) source.getScene().getWindow();
                         window.setScene(new Scene(FXMLLoader.load(getClass().getResource("patriarch.fxml"))));
-                        window.setTitle("儿童银行 家长");
+                        window.setTitle("Parents End");
 
                         return;
                     }
@@ -74,7 +74,7 @@ public class Children_Login {
                         Button source = (Button) e.getSource();
                         Stage window = (Stage) source.getScene().getWindow();
                         window.setScene(new Scene(FXMLLoader.load(getClass().getResource("Children_Main.fxml"))));
-                        window.setTitle("儿童银行 儿童");
+                        window.setTitle("Children End");
 
                         return;
                     }
@@ -83,8 +83,8 @@ public class Children_Login {
         }
 
         Alert A=new Alert(Alert.AlertType.ERROR);
-        A.setTitle("儿童银行 登录");
-        A.setHeaderText("错误,账户不存在或密码错误");
+        A.setTitle("Welcome to Children Bank");
+        A.setHeaderText("Error, account does not exist or password is incorrect");
         A.showAndWait();
 //        Button source = (Button) e.getSource();
 //        Stage stage= (Stage) source.getScene().getWindow();
@@ -100,7 +100,7 @@ public class Children_Login {
     public void Register(Event e) throws IOException {
         Label source = (Label) e.getSource();
         Stage stage= (Stage) source.getScene().getWindow();
-        stage.setTitle("注册");
+        stage.setTitle("Register");
         stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Register.fxml")))));
     }
 }

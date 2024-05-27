@@ -10,13 +10,13 @@
    <children>
       <TableView fx:id="tableView" layoutX="55.0" layoutY="99.0" prefHeight="327.0" prefWidth="705.0">
         <columns>
-          <TableColumn fx:id="type" prefWidth="116.0" text="请求类型" />
-          <TableColumn fx:id="blanc" prefWidth="117.0" text="金额" />
-            <TableColumn fx:id="name" prefWidth="110.0" text="请求人" />
-            <TableColumn fx:id="Description" prefWidth="360.0" text="事项" />
+          <TableColumn fx:id="type" prefWidth="116.0" text="Type of Requirements" />
+          <TableColumn fx:id="blanc" prefWidth="117.0" text="Money" />
+            <TableColumn fx:id="name" prefWidth="110.0" text="Child" />
+            <TableColumn fx:id="Description" prefWidth="360.0" text="Event" />
         </columns>
       </TableView>
-      <Button layoutX="183.0" layoutY="469.0" mnemonicParsing="false" onAction="#Grant_request" text="同意请求" />
-      <Button layoutX="498.0" layoutY="469.0" mnemonicParsing="false" text="拒绝请求" />
+      <Button layoutX="183.0" layoutY="469.0" mnemonicParsing="false" onAction="#Grant_request" text="Agree" />
+      <Button layoutX="498.0" layoutY="469.0" mnemonicParsing="false" text="Refuse" />
    </children>
 </AnchorPane>

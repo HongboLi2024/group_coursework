@@ -8,13 +8,13 @@
 
 <AnchorPane prefHeight="470.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cx.Page.Children_Login">
    <children>
-      <Label layoutX="153.0" layoutY="171.0" text="用户名：" />
-      <Label layoutX="153.0" layoutY="241.0" text="密码：" />
+      <Label layoutX="153.0" layoutY="171.0" text="username：" />
+      <Label layoutX="153.0" layoutY="241.0" text="password" />
       <TextField fx:id="username" layoutX="223.0" layoutY="166.0" />
       <PasswordField fx:id="password" layoutX="223.0" layoutY="236.0" />
-      <Button layoutX="198.0" layoutY="402.0" mnemonicParsing="false" onAction="#Login" prefHeight="30.0" prefWidth="225.0" text="登录" />
-      <Label onMousePressed="#Register" layoutX="363.0" layoutY="359.0" text="创建账号" textFill="#160af5" />
+      <Button layoutX="198.0" layoutY="402.0" mnemonicParsing="false" onAction="#Login" prefHeight="30.0" prefWidth="225.0" text="log in" />
+      <Label onMousePressed="#Register" layoutX="363.0" layoutY="359.0" text="Creat a new account" textFill="#160af5" />
       <ChoiceBox fx:id="id" layoutX="223.0" layoutY="297.0" prefHeight="30.0" prefWidth="202.0" />
-      <Label layoutX="156.0" layoutY="302.0" text="身份:" />
+      <Label layoutX="156.0" layoutY="302.0" text="You are:" />
    </children>
 </AnchorPane>

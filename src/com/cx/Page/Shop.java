@@ -18,6 +18,9 @@ public class Shop {
     @FXML
     TableView tableView;
 
+
+
+
     @FXML
     TableColumn type;
 
@@ -45,33 +48,33 @@ public class Shop {
                 Apply_For apply_for = new Apply_For();
                 apply_for.setMoney(selectedItem.getMoney());
                 apply_for.setApply_for_Name(Children_Login.children.getUsername());
-                apply_for.setType("购买商品");
-                apply_for.setDescription("购买商品: " + selectedItem.getName());
+                apply_for.setType("Purchase Goods");
+                apply_for.setDescription("Purchase Goods: " + selectedItem.getName());
                 Children_Login.children.getPatriarch().getApply_fors().add(apply_for);
 
                 File_Date.Writ_File(Children_Login.data1);
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("购买商品");
+                alert.setTitle("Purchase Goods");
                 alert.setHeaderText(null);
-                alert.setContentText("购买请求已发送");
+                alert.setContentText("Purchase request sent");
 
                 alert.showAndWait();
 
 
             }else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("购买商品");
+                alert.setTitle("Purchase Goods");
                 alert.setHeaderText(null);
-                alert.setContentText("错误,账户可用余额不足");
+                alert.setContentText("Error, insufficient available balance in account");
 
                 alert.showAndWait();
             }
 
         }else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("购买商品");
+            alert.setTitle("Purchase Goods");
             alert.setHeaderText(null);
-            alert.setContentText("错误,请从任务列表选择任务");
+            alert.setContentText("Error, please select a good from the shop");
 
             alert.showAndWait();
         }

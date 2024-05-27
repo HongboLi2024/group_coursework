@@ -48,9 +48,9 @@ public class Task_List {
                     File_Date.Writ_File(Children_Login.data1);
                     Update();
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle("接受任务");
+                    alert.setTitle("Take the task");
                     alert.setHeaderText(null);
-                    alert.setContentText("接受任务成功");
+                    alert.setContentText("Successfully take the task");
 
                     alert.showAndWait();
 
@@ -60,9 +60,9 @@ public class Task_List {
 
         }else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("接受任务");
+            alert.setTitle("Take the task");
             alert.setHeaderText(null);
-            alert.setContentText("错误,请从任务列表选择任务");
+            alert.setContentText("Error, please select a task from the task list");
 
             alert.showAndWait();
         }

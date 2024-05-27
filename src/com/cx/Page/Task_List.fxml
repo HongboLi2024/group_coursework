@@ -10,11 +10,11 @@
    <children>
       <TableView fx:id="tableView" layoutX="69.0" layoutY="47.0" prefHeight="391.0" prefWidth="699.0">
         <columns>
-          <TableColumn fx:id="time" prefWidth="169.0" text="时间" />
-          <TableColumn fx:id="type" prefWidth="431.0" text="任务说明" />
-            <TableColumn fx:id="blanc" prefWidth="98.0" text="金额" />
+          <TableColumn fx:id="time" prefWidth="169.0" text="Time" />
+          <TableColumn fx:id="type" prefWidth="431.0" text="Description" />
+            <TableColumn fx:id="blanc" prefWidth="98.0" text="Money" />
         </columns>
       </TableView>
-      <Button onAction="#Accept_Task" layoutX="354.0" layoutY="475.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="129.0" text="接受任务" />
+      <Button onAction="#Accept_Task" layoutX="354.0" layoutY="475.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="129.0" text="Take the task" />
    </children>
 </AnchorPane>

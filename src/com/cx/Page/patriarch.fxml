@@ -9,11 +9,11 @@
 
 <AnchorPane prefHeight="501.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cx.Page.Patriarch_c">
    <children>
-      <Button layoutX="214.0" layoutY="216.0" mnemonicParsing="false" onAction="#RequestProcessing" prefHeight="42.0" prefWidth="277.0" text="处理请求" />
-      <Button layoutX="214.0" layoutY="312.0" mnemonicParsing="false" onAction="#Task" prefHeight="42.0" prefWidth="277.0" text="任务管理" />
-      <Button layoutX="214.0" layoutY="403.0" mnemonicParsing="false" onAction="#Shop" prefHeight="42.0" prefWidth="277.0" text="商品管理" />
-      <Button layoutX="214.0" layoutY="122.0" mnemonicParsing="false" onAction="#Child" prefHeight="42.0" prefWidth="277.0" text="我的孩子" />
-      <Label layoutX="264.0" layoutY="14.0" prefHeight="17.0" prefWidth="315.0" text="家长模式">
+      <Button layoutX="214.0" layoutY="216.0" mnemonicParsing="false" onAction="#RequestProcessing" prefHeight="42.0" prefWidth="277.0" text="Processing requests" />
+      <Button layoutX="214.0" layoutY="312.0" mnemonicParsing="false" onAction="#Task" prefHeight="42.0" prefWidth="277.0" text="Task Management" />
+      <Button layoutX="214.0" layoutY="403.0" mnemonicParsing="false" onAction="#Shop" prefHeight="42.0" prefWidth="277.0" text="Goods Management" />
+      <Button layoutX="214.0" layoutY="122.0" mnemonicParsing="false" onAction="#Child" prefHeight="42.0" prefWidth="277.0" text="My Child" />
+      <Label layoutX="264.0" layoutY="14.0" prefHeight="17.0" prefWidth="315.0" text="Parent End">
          <font>
             <Font size="41.0" />
          </font>

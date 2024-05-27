@@ -28,7 +28,7 @@ public class Patriarch_c {
         RequestProcessing records= fxmlLoader.getController();
         records.Set_Data(Children_Login.patriarch.getApply_fors());
         stage.setScene(new Scene(anchorPane));
-        stage.setTitle("请求处理");
+        stage.setTitle("Processing Requirement");
         stage.show();
     }
 
@@ -46,7 +46,7 @@ public class Patriarch_c {
         TaskManagement records= fxmlLoader.getController();
         records.Set_Data(Children_Login.patriarch.getTasks());
         stage.setScene(new Scene(anchorPane));
-        stage.setTitle("任务管理");
+        stage.setTitle("Task Management");
         stage.show();
     }
 
@@ -57,7 +57,7 @@ public class Patriarch_c {
     public void Shop() throws IOException {
         Stage stage=new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("Shop_Management.fxml"))));
-        stage.setTitle("任务列表");
+        stage.setTitle("Goods Management");
         stage.show();
     }
     /**
@@ -66,7 +66,7 @@ public class Patriarch_c {
     public void Child() throws IOException {
         Stage stage=new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("My_Child.fxml"))));
-        stage.setTitle("我的孩子");
+        stage.setTitle("My Child");
         stage.show();
     }
 }

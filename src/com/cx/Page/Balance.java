@@ -26,8 +26,8 @@ public class Balance {
 
     public void initialize() {
 
-        D.setText("定期余额:"+Children_Login.children.getMoney_D());
-        H.setText("定期余额:"+Children_Login.children.getMoney_H());
+        D.setText("Fixed account balance:"+Children_Login.children.getMoney_D());
+        H.setText("Current account balance:"+Children_Login.children.getMoney_H());
 
 
 
@@ -41,8 +41,8 @@ public class Balance {
      */
     public void Withdraw(){
         TextInputDialog dialog = new TextInputDialog("金额");
-        dialog.setTitle("提取现金");
-        dialog.setHeaderText("输入你要提取的金额");
+        dialog.setTitle("Withdraw");
+        dialog.setHeaderText("Enter the amount you want to withdraw");
 
 // Traditional way to get the response value.
         Optional<String> result = dialog.showAndWait();
@@ -53,30 +53,30 @@ public class Balance {
                 if(i<=Children_Login.children.getMoney_H()){
                     Apply_For apply_for=new Apply_For();
                     apply_for.setApply_for_Name(Children_Login.children.getUsername());
-                    apply_for.setType("提取现金");
+                    apply_for.setType("Withdraw");
                     apply_for.setMoney(i);
                     Children_Login.children.getPatriarch().getApply_fors().add(apply_for);
                     File_Date.Writ_File(Children_Login.data1);
 
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle("提取余额");
+                    alert.setTitle("Withdrawal balance");
                     alert.setHeaderText(null);
-                    alert.setContentText("已发送请求至家长，等待家长审批");
+                    alert.setContentText("Request has been sent to parents, waiting for their approval");
 
                     alert.showAndWait();
                 }else {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("错误");
-                    alert.setHeaderText("提取失败");
-                    alert.setContentText("余额不足");
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Fail to Withdraw");
+                    alert.setContentText("Insufficient Balance");
 
                     alert.showAndWait();
                 }
             } catch (NumberFormatException e) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("错误");
-                alert.setHeaderText("提取失败");
-                alert.setContentText("请输入数字");
+                alert.setTitle("Error");
+                alert.setHeaderText("Fail to Withdraw");
+                alert.setContentText("Please enter the amount you want!");
 
                 alert.showAndWait();
             }
@@ -88,7 +88,7 @@ public class Balance {
      * 目标
      */
     public void goal(){
-        TextInputDialog dialog = new TextInputDialog("金额");
+        TextInputDialog dialog = new TextInputDialog("Money");
         dialog.setTitle("存入目标");
         dialog.setHeaderText("输入你要存入的金额");
 

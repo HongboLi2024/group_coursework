@@ -31,8 +31,8 @@ public class Register {
     public void initialize() {
 
 
-        id.getItems().add("家长");
-        id.getItems().add("儿童");
+        id.getItems().add("Parent");
+        id.getItems().add("Children");
         id.getSelectionModel().select(0);
     }
 
@@ -83,12 +83,12 @@ public class Register {
             }
 
             Alert alert=new Alert(Alert.AlertType.WARNING);
-            alert.setHeaderText("注册成功,返回登录");
+            alert.setHeaderText("Registration successful, return to login");
             alert.showAndWait();
             Login(event);
         }else {
             Alert alert=new Alert(Alert.AlertType.WARNING);
-            alert.setHeaderText("注册失败,该账户已被注册");
+            alert.setHeaderText("Registration failed, the account has already been registered");
             alert.showAndWait();
         }
 
@@ -106,7 +106,7 @@ public class Register {
 
         Button source = (Button) event.getSource();
         Stage stage= (Stage) source.getScene().getWindow();
-        stage.setTitle("登录");
+        stage.setTitle("Log in");
         stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Login.fxml")))));
     }
 }
