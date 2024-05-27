@@ -68,15 +68,15 @@ public class ShopManagement {
         grid.setVgap(10);
         grid.setPadding(new Insets(20, 150, 10, 10));
 
-        TextField username = new TextField();
-        username.setPromptText("Description of Goods");
-        TextField password = new TextField();
-        password.setPromptText("Price");
+        TextField goodname = new TextField();
+        goodname.setPromptText("Description of Goods");
+        TextField goodPrice = new TextField();
+        goodPrice.setPromptText("Price");
 
         grid.add(new Label("Description of Goods:"), 0, 0);
-        grid.add(username, 1, 0);
+        grid.add(goodname, 1, 0);
         grid.add(new Label("Price:"), 0, 1);
-        grid.add(password, 1, 1);
+        grid.add(goodPrice, 1, 1);
 
 
 // Enable/Disable login button depending on whether a username was entered.
@@ -84,19 +84,19 @@ public class ShopManagement {
         loginButton.setDisable(true);
 
 // Do some validation (using the Java 8 lambda syntax).
-        username.textProperty().addListener((observable, oldValue, newValue) -> {
+        goodname.textProperty().addListener((observable, oldValue, newValue) -> {
             loginButton.setDisable(newValue.trim().isEmpty());
         });
 
         dialog.getDialogPane().setContent(grid);
 
 // Request focus on the username field by default.
-        Platform.runLater(() -> username.requestFocus());
+        Platform.runLater(() -> goodname.requestFocus());
 
 // Convert the result to a username-password-pair when the login button is clicked.
         dialog.setResultConverter(dialogButton -> {
             if (dialogButton == loginButtonType) {
-                return new Pair<>(username.getText(), password.getText());
+                return new Pair<>(goodname.getText(), goodPrice.getText());
             }
             return null;
         });
@@ -105,11 +105,11 @@ public class ShopManagement {
 
         result.ifPresent(usernamePassword -> {
             Product product=new Product();
-            product.setName(username.getText());
+            product.setName(goodname.getText());
 
 
             try {
-             product.setMoney(Double.parseDouble(password.getText()));
+             product.setMoney(Double.parseDouble(goodPrice.getText()));
                 Children_Login.parent.getProductArrayList().add(product);
                 File_Date.Writ_File(Children_Login.data1);
                 Set_Data();
