@@ -119,10 +119,6 @@ public class ShopManagement {
                 A.setHeaderText("Error, please enter the correct information");
                 A.showAndWait();
             }
-
-
-
-
         });
 
     }

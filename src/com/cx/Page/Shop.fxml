@@ -10,8 +10,8 @@
     <children>
         <TableView fx:id="tableView" layoutX="69.0" layoutY="47.0" prefHeight="391.0" prefWidth="699.0">
             <columns>
-                <TableColumn fx:id="type" prefWidth="512.0" text="Description of Goods" />
-                <TableColumn fx:id="blanc" prefWidth="186.0" text="Price" />
+                <TableColumn fx:id="name" prefWidth="512.0" text="Description of Goods" />
+                <TableColumn fx:id="price" prefWidth="186.0" text="Price" />
             </columns>
         </TableView>
         <Button layoutX="354.0" layoutY="475.0" mnemonicParsing="false" onAction="#Shop_Apply_For" prefHeight="37.0" prefWidth="129.0" text="Purchase Goods" />
